@@ -25,7 +25,18 @@ https://sg-postalcodes2017.glitch.me/
 
 ## Setup
 
-Install the dependencies for the detected stack and run the existing entry point from the repository source tree.
+The JSON-to-CSV utility runs on Windows and Linux. In an activated Python 3
+virtual environment, install `pandas`, then explicitly select the input and output:
+
+```sh
+python -m pip install pandas
+python code/jsontocsv.py "path/to/buildings.json" "path/to/buildings.csv"
+```
+
+Use `python3` if that is your Linux interpreter name. Quote paths containing
+spaces. Relative paths are resolved from your current directory; no personal
+Downloads folder is assumed. The output CSV is replaced if it already exists.
+`python code/jsontocsv.py --help` does not read data or require pandas.
 
 ## License
 
